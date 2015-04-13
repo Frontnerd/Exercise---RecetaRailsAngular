@@ -11,6 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20150413125741) do
+
+  create_table "recipes", force: true do |t|
+    t.string   "name",        limit: 255
+    t.text     "intructions", limit: 65535
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
 
 end
